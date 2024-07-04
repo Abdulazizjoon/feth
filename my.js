@@ -39,14 +39,13 @@ function createCard(user) {
     return `
           <div class="card">
               <img src="${user.flag}">
-              <h2>davlat:       ${user.country}</h2>
-              <h2>code: ${user.code}</h2>
-              <h2>id: ${user.id}</h2>
+              <h2>davlat   ${user.country}</h2>
+              <h2>code ${user.code}</h2>
+              <h2>id ${user.id}</h2>
           </div>
           `;
   }
 document.addEventListener('DOMContentLoaded',function() {
-   
       fetch("https://cars-pagination.onrender.com/all-countries", {
         method: "GET",
       })
@@ -68,9 +67,9 @@ document.addEventListener('DOMContentLoaded',function() {
         .catch(function (err) {
             wraper.style.display='block'
           console.log(err);
-        });
+        })
         
-        .finally(function(params) {
+        .finally(function() {
             loader.style.display='none'
         })
 })
