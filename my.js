@@ -38,9 +38,9 @@ function createCard(user) {
     return `
           <div class="card">
               <img src="${user.flag}">
-              <h2>${user.country}</h2>
-              <h2>${user.code}</h2>
-              <h2>${user.id}</h2>
+              <h2>davlat:       ${user.country}</h2>
+              <h2>code: ${user.code}</h2>
+              <h2>id: ${user.id}</h2>
           </div>
           `;
   }
@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded',function() {
                 }
             })
         .then(function (data) {
+            wraper.style.display='block'
             data.forEach((user) => {
               let card = createCard(user);
               wraper.innerHTML += card;
@@ -64,8 +65,13 @@ document.addEventListener('DOMContentLoaded',function() {
         //   console.log(data);
         })
         .catch(function (err) {
+            wraper.style.display='block'
           console.log(err);
         });
+        let loader=document.querySelector('.loader')
+        .finally(function(params) {
+            loader.style.display='none'
+        })
 })
 
 

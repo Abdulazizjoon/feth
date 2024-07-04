@@ -29,6 +29,15 @@ body{
     flex-wrap: wrap;
     /* width: 500px;
     height: 500px; */
+    margin-left:120px;
+    gap: 10px;
+}
+h2{
+    text-align: center;
+    margin-bottom: 5px;
+}
+.loader{
+    margin: 0 auto;
 }
 /* div{
     display: flex;
