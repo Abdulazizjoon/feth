@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded',function() {
                 }
             })
         .then(function (data) {
-            wraper.style.display='block'
+            // wraper.style.display='block'
             data.forEach((user) => {
               let card = createCard(user);
               wraper.innerHTML += card;
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded',function() {
         //   console.log(data);
         })
         .catch(function (err) {
-            wraper.style.display='block'
+            // wraper.style.display='block'
           console.log(err);
         })
         
