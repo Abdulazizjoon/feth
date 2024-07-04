@@ -34,6 +34,7 @@
 //     console.log(5,error);
 // }
 let wraper = document.querySelector(".wraper");
+let loader=document.querySelector('.loader')
 function createCard(user) {
     return `
           <div class="card">
@@ -68,7 +69,7 @@ document.addEventListener('DOMContentLoaded',function() {
             wraper.style.display='block'
           console.log(err);
         });
-        let loader=document.querySelector('.loader')
+        
         .finally(function(params) {
             loader.style.display='none'
         })
